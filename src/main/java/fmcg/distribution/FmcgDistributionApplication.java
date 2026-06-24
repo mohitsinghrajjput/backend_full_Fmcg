@@ -10,6 +10,7 @@ import fmcg.distribution.entity.User;
 import fmcg.distribution.repository.UserRepository;
 import fmcg.distribution.enums.Role;
 
+@EntityScan("fmcg.distribution.entity")  
 @SpringBootApplication
 public class FmcgDistributionApplication {
 
@@ -17,7 +18,7 @@ public class FmcgDistributionApplication {
         SpringApplication.run(FmcgDistributionApplication.class, args);
     }
 
-   // @Bean
+    @Bean
     CommandLineRunner init(@Autowired UserRepository userRepository, 
                           @Autowired PasswordEncoder passwordEncoder) {
         return args -> {
