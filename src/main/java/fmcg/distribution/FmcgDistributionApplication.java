@@ -9,6 +9,8 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import fmcg.distribution.entity.User;
 import fmcg.distribution.repository.UserRepository;
 import fmcg.distribution.enums.Role;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.context.annotation.ComponentScan;
 
 @EntityScan("fmcg.distribution.entity")  
 @SpringBootApplication
