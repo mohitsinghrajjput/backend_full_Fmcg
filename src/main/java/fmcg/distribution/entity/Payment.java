@@ -19,8 +19,10 @@ public class Payment {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     
+   // In Payment.java
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "order_id", nullable = false)
+    @JoinColumn(name = "order_id", nullable = false, 
+    foreignKey = @ForeignKey(name = "fk_payment_order"))
     private Order order;
     
     @Column(nullable = false, precision = 10, scale = 2)
